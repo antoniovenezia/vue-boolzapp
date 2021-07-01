@@ -135,3 +135,26 @@
     color: #6c7376;
     padding-left: 10px;
 }
+
+
+/* MESSAGES */
+.messages{
+    /* display: flex; */
+}
+
+[class*="message-"]{
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    width: 250px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.message-send{
+    background-color: #dcf8c0;
+    
+}
+
+.message-received{
+    background-color: white;
+}

@@ -1,0 +1,9 @@
+-QUESTO PER QUANTO RIGUARDA L'IMPOSTAZIONE DI MESSAGGIO INVIATO E RICEVUTO,
+DUNQUE PROBABILMENTE AVRò BISOGNO DI UNA FUNZIONE:
+
+Per ogni oggetto in array "contacts[index].messages" verificare se
+
+lo status è "sent" allora aggiungere la classe "message-send",
+
+altrimenti se lo status è "received" aggiungere la classe "message received".
+
