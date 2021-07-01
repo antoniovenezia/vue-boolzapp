@@ -1,9 +1,14 @@
 -QUESTO PER QUANTO RIGUARDA L'IMPOSTAZIONE DI MESSAGGIO INVIATO E RICEVUTO,
-DUNQUE PROBABILMENTE AVRò BISOGNO DI UNA FUNZIONE:
+DUNQUE PROBABILMENTE AVRò BISOGNO DI UNA FUNZIONE CHE LO ESPRIMA:
 
-Per ogni oggetto in array "contacts[index].messages" verificare se
+Per ogni oggetto in array "contacts[index].messages" verificare: se
 
 lo status è "sent" allora aggiungere la classe "message-send",
 
 altrimenti se lo status è "received" aggiungere la classe "message received".
+
+...una volta verificato questo, stampare il contacts[index].messages[text] in un div
+da me scelto in precedenza (tramite un ID) nell'HTML.
+
+...e con lo stesso procedimento poi anche la data..
 
