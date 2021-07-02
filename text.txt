@@ -17,5 +17,6 @@ da me scelto in precedenza (tramite un ID) nell'HTML.
 TODO LIST:
 -Posizione sulla destra dei messaggi inviati
 -inserire data all'interno del MESSAGGIO
+-overflow: y scroll, all'interno sia della parte sx che dx
 
 

@@ -97,7 +97,8 @@ new Vue(
         },
 
         methods: {
-            getCurrentIndex: function(index){
+            
+            getCurrentIndex: function (index) {
                 return this.currentIndex = index;
             },
 
@@ -109,17 +110,25 @@ new Vue(
                 }
             },
 
-            addMessageFunction: function(){
+            addMessageFunction: function () {
                 this.contacts[this.currentIndex].messages.push(
                     {
                         date: '10/01/2020 15:30:55',
                         text: this.addMessage,
                         status: 'sent'
                     },
+                    
                 ),
                 this.addMessage = "";
+                setTimeout(function () {
+                    this.contacts[this.currentIndex].messages.push(
+                        {
+                            date: '10/01/2020 15:30:55',
+                            text: "Ok",
+                            status: 'received'
+                        })
+                }, 1000);
             }
         }
     })
 
-console.log();
