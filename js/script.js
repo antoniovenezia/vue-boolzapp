@@ -88,7 +88,16 @@ new Vue(
                         }
                     ],
                 },
-            ]
+            ],
+            methods: {
+                getMessageClass: function(){
+                    if (this.contacts[index].messages[status] === "sent") {
+                        return "message-send";
+                    } else {
+                        return "message-recceived";
+                    }
+                },
+            }
 
 
         },

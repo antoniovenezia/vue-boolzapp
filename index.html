@@ -107,13 +107,12 @@
                                 </div>
                             </div> -->
 
-                            <!-- <div v-for(oggetto in contacts)> -->
-                                <div class="message-received">
-                                    <div>BENE E TU?</div>
+                            <div v-for="(oggetto, index) in contacts">
+                                <div :class="">
+                                    <div>{{contacts[index].messages.text}}</div> 
                                 </div>
-                            <!-- </div> -->
+                            </div>
 
-                            
 
                         </div>
 
