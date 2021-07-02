@@ -120,14 +120,14 @@ new Vue(
                     
                 ),
                 this.addMessage = "";
-                setTimeout(function () {
+                // setTimeout(function () {
                     this.contacts[this.currentIndex].messages.push(
                         {
                             date: '10/01/2020 15:30:55',
                             text: "Ok",
                             status: 'received'
                         })
-                }, 1000);
+                // }, 1000);
             }
         }
     })
