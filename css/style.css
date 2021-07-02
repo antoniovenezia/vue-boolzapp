@@ -152,7 +152,8 @@
 
 .message-send{
     background-color: #dcf8c0;
-    
+    display: flex;
+    justify-content: end;
 }
 
 .message-received{

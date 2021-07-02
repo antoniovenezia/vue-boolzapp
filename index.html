@@ -64,7 +64,7 @@
                         </div>
 
                         <div class="chats-sidebar">
-                            <div v-for="(contact, index) in contacts" class="row align-items-center chat-sidebar">
+                            <div @click="getCurrentIndex(currentIndex)" v-for="(contact, index) in contacts" class="row align-items-center chat-sidebar">
                                 <div class="col-3">
                                     <img :src="contacts[index].avatar" alt="Immagine">
                                 </div>
@@ -107,11 +107,10 @@
                                 </div>
                             </div> -->
 
-                            <div v-for="(oggetto, index) in contacts">
-                                <div :class="">
-                                    <div>{{contacts[index].messages.text}}</div> 
-                                </div>
+                            <div v-for="(oggetto, index) in contacts[currentIndex].messages">
+                                <div>{{ oggetto.text }}</div> 
                             </div>
+                            
 
 
                         </div>

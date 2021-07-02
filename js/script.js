@@ -4,6 +4,7 @@ new Vue(
     {
         el: '#app',
         data: {
+            currentIndex: 0,
             contacts: [
                 {
                     name: 'Michele',
@@ -89,18 +90,23 @@ new Vue(
                     ],
                 },
             ],
-            methods: {
-                getMessageClass: function(){
-                    if (this.contacts[index].messages[status] === "sent") {
-                        return "message-send";
-                    } else {
-                        return "message-recceived";
-                    }
-                },
-            }
 
 
         },
+
+        methods: {
+            getCurrentIndex: function(index){
+                return this.currentIndex === index;
+            },
+
+            getMessageClass: function (index) {
+                if (this.contacts[this.currentIndex].messages[index].status === "sent") {
+                    return "message-send";
+                } else {
+                    return "message-received";
+                }
+            },
+        }
     })
 
 console.log();
