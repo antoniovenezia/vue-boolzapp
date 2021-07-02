@@ -4,7 +4,9 @@ new Vue(
     {
         el: '#app',
         data: {
+
             currentIndex: 0,
+            addMessage: "",
             contacts: [
                 {
                     name: 'Michele',
@@ -96,7 +98,7 @@ new Vue(
 
         methods: {
             getCurrentIndex: function(index){
-                return this.currentIndex === index;
+                return this.currentIndex = index;
             },
 
             getMessageClass: function (index) {
@@ -106,6 +108,17 @@ new Vue(
                     return "message-received";
                 }
             },
+
+            addMessageFunction: function(){
+                this.contacts[this.currentIndex].messages.push(
+                    {
+                        date: '10/01/2020 15:30:55',
+                        text: this.addMessage,
+                        status: 'sent'
+                    },
+                ),
+                this.addMessage = "";
+            }
         }
     })
 

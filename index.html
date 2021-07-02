@@ -64,7 +64,10 @@
                         </div>
 
                         <div class="chats-sidebar">
-                            <div @click="getCurrentIndex(currentIndex)" v-for="(contact, index) in contacts" class="row align-items-center chat-sidebar">
+                            <div 
+                            @click="getCurrentIndex(index)" 
+                            v-for="(contact, index) in contacts"
+                            class="row align-items-center chat-sidebar">
                                 <div class="col-3">
                                     <img :src="contacts[index].avatar" alt="Immagine">
                                 </div>
@@ -107,10 +110,12 @@
                                 </div>
                             </div> -->
 
-                            <div v-for="(oggetto, index) in contacts[currentIndex].messages">
-                                <div>{{ oggetto.text }}</div> 
+
+                            <div v-for="(oggetto, index) in contacts[currentIndex].messages"
+                                :class="getMessageClass(index)">
+                                <div>{{ oggetto.text }}</div>
+
                             </div>
-                            
 
 
                         </div>
@@ -120,7 +125,12 @@
 
                                 <div class="col-1"><i class="far fa-smile"></i></div>
                                 <div class="col">
-                                    <input type="text" placeholder="Scrivi un messaggio">
+                                    <input 
+                                        v-model="addMessage" 
+                                        type="text" 
+                                        placeholder="Scrivi un messaggio"
+                                        @keyup.enter="addMessageFunction(addMessage)"
+                                    >
                                 </div>
                                 <div class="col-1"><i class="fas fa-microphone"></i></div>
                             </div>

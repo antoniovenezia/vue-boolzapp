@@ -12,3 +12,10 @@ da me scelto in precedenza (tramite un ID) nell'HTML.
 
 ...e con lo stesso procedimento poi anche la data..
 
+
+
+TODO LIST:
+-Posizione sulla destra dei messaggi inviati
+-inserire data all'interno del MESSAGGIO
+
+
